@@ -1,0 +1,83 @@
+.slick-arrow {
+   position: absolute;
+   top: 40%;
+
+   font-size: 0;
+   outline: none;
+   border: none;
+   cursor: pointer;
+
+   width: 30px;
+   height: 30px;
+   z-index: 1000;
+
+   opacity: 0.5;
+   transition: opacity .1s linear;
+
+   &:hover {
+      opacity: 1;
+   }
+}
+
+.slick-prev {
+   left: -60px;
+
+   background: url(https://img.icons8.com/ios-glyphs/30/ffffff/circled-chevron-left.png) center no-repeat;
+   background-size: cover;
+}
+
+.slick-next {
+   right: -60px;
+
+   background: url(https://img.icons8.com/ios-glyphs/30/ffffff/circled-chevron-right.png) center no-repeat;
+   background-size: cover;
+}
+
+.slick-dots {
+   display: flex;
+   justify-content: center;
+   padding-top: 30px;
+
+   gap: 0 15px;
+   
+   // DOT
+   & li.slick-active button {
+      opacity: 1;
+   }
+
+   & li button {
+      font-size: 0;
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      background: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      border-radius: 50%;
+
+      opacity: .5;
+      transition: opacity .1s linear;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+
+@media (max-width: 1370px) {
+   .slick-prev {
+      left: 0;
+   }
+   .slick-next {
+      right: 0;
+   }
+}
+
+@media (max-width: 540px) {
+   .slick-dots li button {
+      width: 12px;
+      height: 12px;
+   }
+}
